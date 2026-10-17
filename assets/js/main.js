@@ -499,25 +499,38 @@
   function initStageCanvas() {
     const canvas = document.getElementById('stageCanvas');
     if (!canvas) return;
+
+    // Completely bypass particle animation on mobile viewports to prevent GPU memory lockup
+    if (window.innerWidth <= 768) {
+      canvas.style.display = 'none';
+      return;
+    }
+
     const ctx = canvas.getContext('2d');
     let width = canvas.width = window.innerWidth;
     let height = canvas.height = window.innerHeight;
 
     window.addEventListener('resize', () => {
+      if (window.innerWidth <= 768) {
+        canvas.style.display = 'none';
+        return;
+      } else {
+        canvas.style.display = '';
+      }
       width = canvas.width = window.innerWidth;
       height = canvas.height = window.innerHeight;
     }, { passive: true });
 
     // Gold dust / stage sparks
     const particles = [];
-    const PARTICLE_COUNT = Math.min(38, Math.floor(window.innerWidth / 35));
+    const PARTICLE_COUNT = Math.min(28, Math.floor(window.innerWidth / 45));
 
     for (let i = 0; i < PARTICLE_COUNT; i++) {
       particles.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        radius: Math.random() * 2.2 + 0.6,
-        alpha: Math.random() * 0.45 + 0.15,
+        radius: Math.random() * 2 + 0.6,
+        alpha: Math.random() * 0.4 + 0.15,
         speedY: -(Math.random() * 0.35 + 0.1),
         speedX: (Math.random() - 0.5) * 0.2,
         pulseSpeed: Math.random() * 0.02 + 0.01,
@@ -544,8 +557,6 @@
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(${p.color}, ${Math.max(0.05, Math.min(0.65, p.alpha))})`;
-        ctx.shadowBlur = 10;
-        ctx.shadowColor = `rgba(${p.color}, 0.5)`;
         ctx.fill();
       }
 

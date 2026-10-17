@@ -2273,7 +2273,7 @@ body.rtl-mode .lightbox-close {
         rgba(8, 9, 13, 0.48) 24%, 
         rgba(8, 9, 13, 0.84) 64%, 
         var(--bg-primary) 100%),
-      url('../images/theatre-portrait-bw.jpg');
+      url('../images/theatre-portrait-bw-mobile.jpg');
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
@@ -2289,7 +2289,16 @@ body.rtl-mode .lightbox-close {
         rgba(8, 9, 13, 0.48) 24%, 
         rgba(8, 9, 13, 0.84) 64%, 
         var(--bg-primary) 100%),
-      url('../images/theatre-portrait-bw.jpg');
+      url('../images/theatre-portrait-bw-mobile.jpg');
+  }
+
+  /* Disable expensive 140px GPU blur filters and canvas on mobile to prevent main-thread freeze */
+  .ambient-glow {
+    display: none !important;
+  }
+
+  #stageCanvas {
+    display: none !important;
   }
 
   .hero-content {

@@ -14,10 +14,12 @@
   <meta property="og:image" content="assets/images/IMG_6007.jpg">
   <meta property="og:type" content="website">
 
-  <!-- Google Fonts: Cinzel, Plus Jakarta Sans, and Alexandria for Arabic -->
+  <!-- Google Fonts: Cinzel, Plus Jakarta Sans, and Alexandria for Arabic (Streamlined & Non-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700;800&family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@600;700&family=Cinzel:wght@700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" as="style">
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@600;700&family=Cinzel:wght@700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@600;700&family=Cinzel:wght@700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -71,7 +73,7 @@
     <div class="container nav-container">
       <!-- Brand Logo using Ahmed's AJK Calligraphy Logo -->
       <a href="#" class="brand-logo" aria-label="Ahmed Kullab Home">
-        <img src="assets/images/logo-dark-theme.png" alt="AJK Logo" class="brand-logo-img">
+        <img src="assets/images/logo-mobile.png" alt="AJK Logo" class="brand-logo-img" width="130" height="110">
         <div class="brand-text">
           <span class="brand-name"><span class="brand-first">AHMED</span> <span class="brand-last">KULLAB</span></span>
           <span class="brand-sub" data-i18n="hero.tag">Acrobatic Dance • Contemporary Circus</span>
@@ -164,7 +166,7 @@
             <div class="hero-image-wrapper">
               <picture>
                 <source srcset="assets/images/IMG_6007.webp" type="image/webp">
-                <img src="assets/images/IMG_6007.jpg" alt="Ahmed Kullab on stage at Slovenija Ima Talent" loading="eager">
+                <img src="assets/images/IMG_6007.jpg" alt="Ahmed Kullab on stage at Slovenija Ima Talent" loading="lazy">
               </picture>
             </div>
 
@@ -1031,7 +1033,7 @@
   <footer class="site-footer">
     <div class="container footer-content">
       <div class="footer-brand">
-        <img src="assets/images/logo-dark-theme.png" alt="AJK Logo" class="footer-logo-img">
+        <img src="assets/images/logo-mobile.png" alt="AJK Logo" class="footer-logo-img" width="120" height="100">
         <div class="footer-copy">
           <p data-i18n="footer.rights">© 2026 Ahmed Kullab. All rights reserved.</p>
           <p class="footer-crafted" data-i18n="footer.bio_micro">Acrobatic Dancer, Contemporary Circus Artist & Coach. Ljubljana, Slovenia.</p>
