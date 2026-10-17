@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Ahmed Kullab | Acro Dancer & Circus Artist</title>
+  <meta name="description" content="Portfolio of Ahmed Kullab – Palestinian acrobatic dancer and contemporary circus performer based in Ljubljana, Slovenia. Golden Buzzer finalist on Slovenija Ima Talent.">
+  <meta name="keywords" content="Ahmed Kullab, Acro Dance, Circus Artist, Slovenija Ima Talent, Golden Buzzer, Ljubljana, Contemporary Circus, Choreographer, Supertalent">
+  <meta name="author" content="Ahmed Kullab">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ahmed Kullab | Acro Dancer & Circus Artist">
+  <meta property="og:description" content="Official portfolio of Ahmed Kullab – Palestinian acrobatic dancer and contemporary circus performer based in Ljubljana, Slovenia.">
+  <meta property="og:image" content="assets/images/IMG_6007.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Cinzel, Plus Jakarta Sans, and Alexandria for Arabic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700;800&family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Animated Particle Background -->
+  <canvas id="stageCanvas"></canvas>
+
+  <!-- Ambient Stage Glows -->
+  <div class="ambient-glow glow-gold"></div>
+  <div class="ambient-glow glow-blue"></div>
+  <div class="ambient-glow glow-crimson"></div>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="drawer-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-drawer" aria-label="Mobile Navigation">
+    <nav>
+      <ul class="mobile-nav-links">
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#events" data-i18n="nav.events">Upcoming Show</a></li>
+        <li><a href="#solos" data-i18n="nav.solos">Major Solos</a></li>
+        <li><a href="#disciplines" data-i18n="nav.disciplines">Repertoire</a></li>
+        <li><a href="#accolades" data-i18n="nav.accolades">Accolades</a></li>
+        <li><a href="#productions" data-i18n="nav.productions">History</a></li>
+        <li><a href="#gallery" data-i18n="nav.gallery">Gallery</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        <li>
+          <a href="CV,Ahmed kullab.pdf" target="_blank" rel="noopener">
+            <svg class="icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            <span data-i18n="nav.cv">CV</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="mobile-drawer-bottom">
+      <div class="lang-selector" role="group" aria-label="Language Selector Mobile">
+        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="sl">SL</button>
+        <button type="button" class="lang-btn" data-lang="ar">العربية</button>
+        <button type="button" class="lang-btn" data-lang="it">IT</button>
+      </div>
+      <a href="#contact" class="btn btn-primary" style="width: 100%;" data-i18n="nav.bookNow">Contact / Booking</a>
+    </div>
+  </aside>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <!-- Brand Logo using Ahmed's AJK Calligraphy Logo -->
+      <a href="#" class="brand-logo" aria-label="Ahmed Kullab Home">
+        <img src="assets/images/logo-dark-theme.png" alt="AJK Logo" class="brand-logo-img">
+        <div class="brand-text">
+          <span class="brand-name"><span class="brand-first">AHMED</span> <span class="brand-last">KULLAB</span></span>
+          <span class="brand-sub" data-i18n="hero.tag">Acrobatic Dance • Contemporary Circus</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-desktop-wrapper" aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#events" data-i18n="nav.events">Upcoming Show</a></li>
+          <li><a href="#solos" data-i18n="nav.solos">Major Solos</a></li>
+          <li><a href="#disciplines" data-i18n="nav.disciplines">Repertoire</a></li>
+          <li><a href="#accolades" data-i18n="nav.accolades">Accolades</a></li>
+          <li><a href="#productions" data-i18n="nav.productions">History</a></li>
+          <li><a href="#gallery" data-i18n="nav.gallery">Gallery</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Multilingual Switcher (Centered on mobile viewports) -->
+      <div class="lang-selector header-lang-selector" role="group" aria-label="Language Selector">
+        <button type="button" class="lang-btn active" data-lang="en" title="English">EN</button>
+        <button type="button" class="lang-btn" data-lang="sl" title="Slovenščina">SL</button>
+        <button type="button" class="lang-btn" data-lang="ar" title="العربية">عربي</button>
+        <button type="button" class="lang-btn" data-lang="it" title="Italiano">IT</button>
+      </div>
+
+      <!-- Nav Actions (CTA + Mobile Hamburger Toggle) -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn-header-cta" data-i18n="nav.bookNow">Contact / Booking</a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button type="button" class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content reveal">
+            <div class="section-tag" data-i18n="hero.tag">Acrobatic Dance • Contemporary Circus • Direction</div>
+            <h1 class="hero-headline font-display">
+              <span class="block-line" data-i18n="hero.title_line1">Ahmed Kullab</span>
+              <span class="block-line text-gradient-gold" data-i18n="hero.title_line2">Acrobatic Dance & Circus Art</span>
+            </h1>
+            <p class="hero-lead" data-i18n="hero.subtitle">
+              Palestinian dancer and contemporary circus performer based in Ljubljana, Slovenia. Finalist and Golden Buzzer recipient on Slovenija Ima Talent. Co-founder of Terhal Circus, performing and coaching with Cirkus Fuskabo and Stereo 48.
+            </p>
+            <div class="hero-actions">
+              <a href="#events" class="btn btn-primary" data-i18n="nav.events">Schedule</a>
+              <a href="#contact" class="btn btn-secondary" data-i18n="hero.cta_book">Booking & Contact</a>
+              <a href="CV,Ahmed kullab.pdf" target="_blank" rel="noopener" class="btn btn-outline-gold">
+                <svg class="icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span data-i18n="hero.cv_download">Download CV (PDF)</span>
+              </a>
+            </div>
+
+            <!-- Stats Ribbon -->
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-number" data-count="10" data-suffix="+">10+</span>
+                <span class="stat-label" data-i18n="hero.stat_years">Years Active</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-count="15" data-suffix="+">15+</span>
+                <span class="stat-label" data-i18n="hero.stat_productions">Major Productions</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-count="8" data-suffix="+">8+</span>
+                <span class="stat-label" data-i18n="hero.stat_countries">Countries Toured</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-count="1" data-suffix="">1</span>
+                <span class="stat-label" data-i18n="hero.stat_buzzer">Golden Buzzer Finalist</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visual Card with Stage Photo & Badges -->
+          <div class="hero-visual reveal reveal-delay-2">
+            <div class="hero-image-wrapper">
+              <picture>
+                <source srcset="assets/images/IMG_6007.webp" type="image/webp">
+                <img src="assets/images/IMG_6007.jpg" alt="Ahmed Kullab on stage at Slovenija Ima Talent" loading="eager">
+              </picture>
+            </div>
+
+            <!-- Badge 1: Golden Buzzer -->
+            <div class="hero-badge-pill badge-top-left">
+              <div class="badge-icon-box">
+                <svg class="icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
+              </div>
+              <div class="badge-details">
+                <h4 data-i18n="hero.badge_buzzer_title">Golden Buzzer</h4>
+                <p data-i18n="hero.badge_buzzer_sub">Slovenija Ima Talent</p>
+              </div>
+            </div>
+
+            <!-- Badge 2: Terhal Circus -->
+            <div class="hero-badge-pill badge-bottom-right">
+              <div class="badge-icon-box">
+                <svg class="icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+              </div>
+              <div class="badge-details">
+                <h4 data-i18n="hero.badge_terhal_title">Terhal Circus</h4>
+                <p data-i18n="hero.badge_terhal_sub">Co-Founder & Director</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-visual reveal">
+            <div class="about-visual-card">
+              <picture>
+                <source srcset="assets/images/IMG_7217.webp" type="image/webp">
+                <img src="assets/images/IMG_7217.jpg" alt="Ahmed Kullab theatrical portrait in neon lights" loading="lazy">
+              </picture>
+            </div>
+            <div class="about-quote-card">
+              <p data-i18n="about.quote">"Movement is a direct language connecting discipline, weight, and narrative expression."</p>
+              <span class="quote-author" data-i18n="about.author">— Ahmed Kullab</span>
+            </div>
+          </div>
+
+          <div class="about-text-content reveal reveal-delay-1">
+            <div class="section-tag" data-i18n="about.tag">Background</div>
+            <h2 class="section-title font-display" data-i18n="about.title">Physical Precision and Narrative Form</h2>
+            <p class="about-lead text-gradient-gold" data-i18n="about.lead">
+              Combining ground acrobatics, contemporary dance, and physical theatre developed through training in Palestine and ongoing practice in Europe.
+            </p>
+            <p data-i18n="about.p1">
+              I am Ahmed Kullab (born 1991), an acrobatic dancer and contemporary circus performer living in Ljubljana, Slovenia. My work bridges the technical discipline of breakdance floorwork and acrobatics with contemporary dance partnering and physical theatre dramaturgy.
+            </p>
+            <p data-i18n="about.p2">
+              I completed my undergraduate degree in Primary Education at Al-Quds Open University and earned a 148-hour circus trainer diploma through the Palestinian Circus School. In 2014, I co-founded Terhal Circus to develop contemporary circus work in Palestine. Over the last decade, I have directed, choreographed, and performed across Germany, Italy, France, Jordan, Croatia, Slovenia, and Palestine.
+            </p>
+            <p data-i18n="about.p3">
+              Currently, I perform and teach with Cirkus Fuskabo in Ljubljana and dance with the Stereo 48 company. Alongside stage performance, I regularly teach workshops in acrobatics, partner balance, and movement improvisation.
+            </p>
+
+            <!-- Clean Skill Badges -->
+            <div class="artist-badges">
+              <span class="pill-badge" data-i18n="about.badge_circus">Contemporary Circus</span>
+              <span class="pill-badge" data-i18n="about.badge_acro">Acrobatic Dance</span>
+              <span class="pill-badge" data-i18n="about.badge_direction">Choreography & Direction</span>
+              <span class="pill-badge" data-i18n="about.badge_trainer">Certified Circus Coach (148h)</span>
+            </div>
+
+            <div class="about-actions">
+              <a href="CV,Ahmed kullab.pdf" target="_blank" rel="noopener" class="btn btn-primary">
+                <svg class="icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                <span data-i18n="hero.cv_download">Download CV (PDF)</span>
+              </a>
+              <a href="#contact" class="btn btn-secondary" data-i18n="nav.contact">Contact / Booking</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UPCOMING SOLO SHOW: HOME AWAKE -->
+    <section class="events-section" id="events">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <div class="section-tag" data-i18n="events.tag">Upcoming Solo Show</div>
+          <h2 class="section-title font-display" data-i18n="events.title">Home Awake — Solo Performance</h2>
+          <p class="section-subtitle" data-i18n="events.subtitle">
+            Autobiographical contemporary circus and physical theatre solo exploring exile, distance, and memory.
+          </p>
+        </div>
+
+        <div class="event-showcase-card reveal">
+          <div class="event-showcase-grid">
+            <!-- Show Poster Column -->
+            <div class="event-poster-col">
+              <div class="event-poster-frame">
+                <picture>
+                  <source srcset="assets/images/upcoming-show.webp" type="image/webp">
+                  <img src="assets/images/upcoming-show.jpg" alt="Home Awake - Solo Show Poster by Ahmed Kullab" class="event-poster-img" loading="lazy">
+                </picture>
+                <div class="event-poster-caption">
+                  <span data-i18n="events.show_by">Created &amp; Performed by Ahmed Kullab</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Show Details & Registration Column -->
+            <div class="event-details-col">
+              <div class="event-badges-row">
+                <span class="pill-badge pill-gold" data-i18n="events.badge_premiere">Solo Performance</span>
+                <span class="pill-badge pill-green" data-i18n="events.badge_free">Free Admission</span>
+                <span class="pill-badge pill-outline" data-i18n="events.badge_reg">Registration Required</span>
+              </div>
+
+              <h3 class="event-showcase-heading font-display">Home Awake</h3>
+
+              <div class="event-meta-box">
+                <div class="event-meta-row">
+                  <div class="event-meta-icon">
+                    <svg class="icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  </div>
+                  <div class="event-meta-content">
+                    <strong class="event-meta-primary" data-i18n="events.show_date">24th October • 18:00</strong>
+                  </div>
+                </div>
+
+                <div class="event-meta-row">
+                  <div class="event-meta-icon">
+                    <svg class="icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  </div>
+                  <div class="event-meta-content">
+                    <strong class="event-meta-primary" data-i18n="events.show_venue">Cirkus Fuskabo</strong>
+                    <span class="event-meta-secondary" data-i18n="events.show_address">Ob Ljubljanici 36, Ljubljana, Slovenia</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="event-description-block">
+                <p class="event-desc-lead" data-i18n="events.show_desc">
+                  A story of leaving home to chase a dream, finding moments of joy under the spotlight, and carrying the weight of being far away when home needs you the most. As war breaks out in Palestine in 2023, distance becomes more than miles, it becomes the pain of helplessness, missing the people you love, and longing for a place you can no longer reach. Through acrobatics, movement, and theatre, Home Awake explores what it means to be far from home while home never leaves you.
+                </p>
+              </div>
+
+              <div class="event-cta-buttons">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSezUeT8ltBXnNmJ5oFrazNVVRxgQtPoHc_hD5Y_0MZ7j4Pb6g/viewform?fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAafVGMTWglryLcM18TLhpf8SmQG7UQoGwUn5Q3ukZ-xkBYg0NhxkJNhBdeTVfA_aem_BEkBedaDp9SwCBm8jaDWQQ" target="_blank" rel="noopener" class="btn btn-primary btn-registration">
+                  <svg class="icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                  <span data-i18n="events.btn_register">Register for Free Admission</span>
+                </a>
+                <a href="https://maps.google.com/?q=Cirkus+Fuskabo,+Ob+Ljubljanici+36,+Ljubljana" target="_blank" rel="noopener" class="btn btn-outline-gold">
+                  <svg class="icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+                  <span data-i18n="events.btn_directions">Venue Directions (Google Maps)</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Touring & Festival Inquiries Callout -->
+        <div class="events-callout reveal reveal-delay-2" style="margin-top: 3rem;">
+          <div class="events-callout-text">
+            <h4 data-i18n="events.book_callout">Touring &amp; Festival Inquiries</h4>
+            <p data-i18n="events.book_callout_desc">Inquire about booking full-length solo performances, festival programming, or collaborative residencies.</p>
+          </div>
+          <a href="#contact" class="btn btn-primary" data-i18n="events.cta_inquire">Submit an Inquiry</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAJOR SOLOS SECTION -->
+    <section class="solos-section" id="solos">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <div class="section-tag" data-i18n="solos.tag">Major Solos</div>
+          <h2 class="section-title font-display" data-i18n="solos.title">Signature Solos &amp; Physical Theatre</h2>
+          <p class="section-subtitle" data-i18n="solos.subtitle">
+            Original authorial choreographies confronting memory, checkpoints, exile, and kinetic storytelling.
+          </p>
+        </div>
+
+        <div class="solos-grid">
+          <!-- Solo 1: The Bridge -->
+          <article class="solo-card spotlight-card reveal reveal-delay-1">
+            <div class="solo-visual">
+              <picture>
+                <source srcset="assets/images/solo-the-bridge.webp" type="image/webp">
+                <img src="assets/images/solo-the-bridge.jpg" alt="The Bridge Solo by Ahmed Kullab - Border Transit" loading="lazy">
+              </picture>
+              <div class="solo-visual-overlay">
+                <span class="solo-period-badge" data-i18n="solos.bridge_period">2022 – Present</span>
+              </div>
+            </div>
+            <div class="solo-body">
+              <div class="solo-meta-top">
+                <span class="solo-genre-tag" data-i18n="solos.bridge_genre">Acrobatic Dance Solo • Physical Theatre</span>
+              </div>
+              <h3 class="solo-title font-display" data-i18n="solos.bridge_title">The Bridge</h3>
+              <p class="solo-desc" data-i18n="solos.bridge_desc">
+                A seminal autobiographical solo exploring the psychological and physical reality of crossing border checkpoints between Jordan and Palestine (Amman, Queen Alia Airport). Merging explosive floor acrobatics, aerial leaps, and raw physical vulnerability, The Bridge reflects the state of limbo and constant verification endured by displaced artists.
+              </p>
+              <div class="solo-tags-row">
+                <span class="pill-badge">Checkpoint Border</span>
+                <span class="pill-badge">Queen Alia – Amman</span>
+                <span class="pill-badge">Acrobatic Storytelling</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Solo 2: Home Awake -->
+          <article class="solo-card spotlight-card reveal reveal-delay-2">
+            <div class="solo-visual">
+              <picture>
+                <source srcset="assets/images/solo-home-awake-suitcase.webp" type="image/webp">
+                <img src="assets/images/solo-home-awake-suitcase.jpg" alt="Home Awake Solo by Ahmed Kullab" loading="lazy">
+              </picture>
+              <div class="solo-visual-overlay">
+                <span class="solo-period-badge" data-i18n="solos.home_period">2023 – Present</span>
+              </div>
+            </div>
+            <div class="solo-body">
+              <div class="solo-meta-top">
+                <span class="solo-genre-tag" data-i18n="solos.home_genre">Contemporary Circus Solo • Acro-Theatre</span>
+              </div>
+              <h3 class="solo-title font-display" data-i18n="solos.home_title">Home Awake</h3>
+              <p class="solo-desc" data-i18n="solos.home_desc">
+                A physical inquiry into the ache of distance and war. Carrying only a suitcase and spotlight, Ahmed navigates the tension between pursuing artistic flight in Europe and enduring the harrowing reality of devastation in Palestine.
+              </p>
+              <div class="solo-tags-row">
+                <span class="pill-badge">Exile &amp; Memory</span>
+                <span class="pill-badge">Palestine 2023</span>
+                <span class="pill-badge">Contemporary Circus</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DISCIPLINES & REPERTOIRE -->
+    <section class="disciplines-section" id="disciplines">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <div class="section-tag" data-i18n="disciplines.tag">Repertoire</div>
+          <h2 class="section-title font-display" data-i18n="disciplines.title">Performance & Teaching Disciplines</h2>
+          <p class="section-subtitle" data-i18n="disciplines.subtitle">
+            Available performance formats and workshop modules for theatres, festivals, and cultural institutions.
+          </p>
+        </div>
+
+        <div class="disciplines-grid">
+          <div class="discipline-card reveal reveal-delay-1">
+            <div class="discipline-card-thumb">
+              <picture>
+                <source srcset="assets/images/acro-freeze-ronja.webp" type="image/webp">
+                <img src="assets/images/acro-freeze-ronja.jpg" alt="Acrobatic Dance Solo & Duo" loading="lazy">
+              </picture>
+            </div>
+            <div class="discipline-card-top">
+              <span class="discipline-num">01 / DANCE</span>
+              <h3 data-i18n="disciplines.d1_title">Acrobatic Dance (Solo &amp; Duo)</h3>
+              <p data-i18n="disciplines.d1_desc">
+                Contemporary dance combined with floor acrobatics, balancing, and kinetic momentum. Suitable for theatre stages, outdoor festivals, and site-specific venues.
+              </p>
+            </div>
+            <div class="pill-badge" style="width: fit-content;">Solo &amp; Duo Acts</div>
+          </div>
+
+          <div class="discipline-card reveal reveal-delay-2">
+            <div class="discipline-card-thumb">
+              <picture>
+                <source srcset="assets/images/IMG_6013.webp" type="image/webp">
+                <img src="assets/images/IMG_6013.jpg" alt="Circus Direction & Choreography – Ensemble Staging" loading="lazy">
+              </picture>
+            </div>
+            <div class="discipline-card-top">
+              <span class="discipline-num">02 / DIRECTION</span>
+              <h3 data-i18n="disciplines.d2_title">Circus Direction &amp; Choreography</h3>
+              <p data-i18n="disciplines.d2_desc">
+                Stage direction for contemporary circus ensembles. Past works include Station 48 and A Side in collaboration with the Palestinian Circus School.
+              </p>
+            </div>
+            <div class="pill-badge" style="width: fit-content;">Ensemble Staging</div>
+          </div>
+
+          <div class="discipline-card reveal reveal-delay-3">
+            <div class="discipline-card-thumb">
+              <picture>
+                <source srcset="assets/images/IMG_6007.webp" type="image/webp">
+                <img src="assets/images/IMG_6007.jpg" alt="Television & Commissioned Acts" loading="lazy">
+              </picture>
+            </div>
+            <div class="discipline-card-top">
+              <span class="discipline-num">03 / STAGE</span>
+              <h3 data-i18n="disciplines.d3_title">Television &amp; Commissioned Acts</h3>
+              <p data-i18n="disciplines.d3_desc">
+                Custom stage segments for broadcast productions, cultural openings, and live events requiring technical precision.
+              </p>
+            </div>
+            <div class="pill-badge" style="width: fit-content;">Broadcast &amp; Galas</div>
+          </div>
+
+          <div class="discipline-card reveal reveal-delay-4">
+            <div class="discipline-card-thumb">
+              <picture>
+                <source srcset="assets/images/cyr-stage-spin.webp" type="image/webp">
+                <img src="assets/images/cyr-stage-spin.jpg" alt="Acrobatic Workshops & Coaching" loading="lazy">
+              </picture>
+            </div>
+            <div class="discipline-card-top">
+              <span class="discipline-num">04 / WORKSHOPS</span>
+              <h3 data-i18n="disciplines.d4_title">Acrobatic Workshops &amp; Coaching</h3>
+              <p data-i18n="disciplines.d4_desc">
+                Pedagogical training based on a 148-hour certified curriculum. Modules include floor gymnastics, partner counterbalances, and creative physical improvisation.
+              </p>
+            </div>
+            <div class="pill-badge" style="width: fit-content;">148h Certified Coach</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCOLADES (Spotlight Cards - Clean Vectors) -->
+    <section class="accolades-section" id="accolades">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <div class="section-tag" data-i18n="accolades.tag">Recognition</div>
+          <h2 class="section-title font-display" data-i18n="accolades.title">Awards & Milestones</h2>
+          <p class="section-subtitle" data-i18n="accolades.subtitle">
+            Competitive results and television broadcast features in Europe and the Middle East.
+          </p>
+        </div>
+
+        <div class="accolades-grid">
+          <!-- Award 1: Golden Buzzer -->
+          <div class="spotlight-card featured-card reveal reveal-delay-1">
+            <div class="accolade-header">
+              <div class="accolade-icon">
+                <svg class="icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
+              </div>
+              <div class="accolade-meta">
+                <h3 data-i18n="accolades.item1_title">Golden Buzzer & Grand Finalist</h3>
+                <span class="accolade-org" data-i18n="accolades.item1_org">Slovenija Ima Talent (POP TV, 2023)</span>
+              </div>
+            </div>
+            <p class="accolade-desc" data-i18n="accolades.item1_desc">
+              Selected directly for the final via Golden Buzzer (Zlati Gumb) for a solo acrobatic performance broadcast on Slovenian national television.
+            </p>
+          </div>
+
+          <!-- Award 2: Supertalent Hrvatska -->
+          <div class="spotlight-card reveal reveal-delay-2">
+            <div class="accolade-header">
+              <div class="accolade-icon">
+                <svg class="icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><polyline points="17 2 12 7 7 2"></polyline></svg>
+              </div>
+              <div class="accolade-meta">
+                <h3 data-i18n="accolades.item2_title">Featured Guest Performer</h3>
+                <span class="accolade-org" data-i18n="accolades.item2_org">Supertalent Hrvatska (Nova TV, 2024)</span>
+              </div>
+            </div>
+            <p class="accolade-desc" data-i18n="accolades.item2_desc">
+              Invited acrobatic performance broadcast across Croatia and regional networks.
+            </p>
+          </div>
+
+          <!-- Award 3: Hip-Hop Games Lille -->
+          <div class="spotlight-card reveal reveal-delay-3">
+            <div class="accolade-header">
+              <div class="accolade-icon">
+                <svg class="icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.45 1-1 1H8c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1c0-.55-.45-1-1-1h-1c-.55 0-1-.45-1-1v-2.34"></path><path d="M6 4h12v7a6 6 0 0 1-12 0V4z"></path></svg>
+              </div>
+              <div class="accolade-meta">
+                <h3 data-i18n="accolades.item3_title">1st Place – Best Acro Dance Solo</h3>
+                <span class="accolade-org" data-i18n="accolades.item3_org">Hip-Hop Games Festival (Lille, France, 2019)</span>
+              </div>
+            </div>
+            <p class="accolade-desc" data-i18n="accolades.item3_desc">
+              First place in the solo acrobatic dance category at the international choreographic battle festival in Lille.
+            </p>
+          </div>
+
+          <!-- Award 4: Amman Battle -->
+          <div class="spotlight-card reveal reveal-delay-4">
+            <div class="accolade-header">
+              <div class="accolade-icon">
+                <svg class="icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+              </div>
+              <div class="accolade-meta">
+                <h3 data-i18n="accolades.item4_title">1st Place – Freestyle Battle</h3>
+                <span class="accolade-org" data-i18n="accolades.item4_org">Amman Dance Battle (Amman, Jordan, 2018)</span>
+              </div>
+            </div>
+            <p class="accolade-desc" data-i18n="accolades.item4_desc">
+              Winner of the open freestyle dance battle, evaluated on movement control, musicality, and acrobatic transitions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTIONS & CAREER TIMELINE -->
+    <section class="productions-section" id="productions">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <div class="section-tag" data-i18n="productions.tag">Stage History</div>
+          <h2 class="section-title font-display" data-i18n="productions.title">Selected Productions & Engagements</h2>
+          <p class="section-subtitle" data-i18n="productions.subtitle">
+            Work with companies, institutional schools, and touring productions.
+          </p>
+        </div>
+
+        <div class="timeline-wrapper">
+          <!-- Item 1 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-badge-row">
+                <span class="timeline-period" data-i18n="productions.p1_period">2021 – Present</span>
+                <span class="timeline-role" data-i18n="productions.p1_role">Performer, Trainer & Artistic Collaborator</span>
+              </div>
+              <h3 data-i18n="productions.p1_company">Cirkus Fuskabo (Ljubljana, Slovenia)</h3>
+              <p data-i18n="productions.p1_desc">
+                Key roles in productions Lahko Noč, Peron Čudes, and Cirkodejeva piščal. Regular appearances at the annual Fuskabo Festival.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-badge-row">
+                <span class="timeline-period" data-i18n="productions.p2_period">2016 – Present</span>
+                <span class="timeline-role" data-i18n="productions.p2_role">Acro Dancer</span>
+              </div>
+              <h3 data-i18n="productions.p2_company">Stereo 48 Dance Company</h3>
+              <p data-i18n="productions.p2_desc">
+                Dancer in productions Hip-Hop Gees and Journey to Jerusalem. Performances at Yala Yala Festival (Bet-Jala) and Ramallah Contemporary Dance Festival.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-badge-row">
+                <span class="timeline-period" data-i18n="productions.p3_period">2014 – 2021</span>
+                <span class="timeline-role" data-i18n="productions.p3_role">Co-Founder, Director & Performer</span>
+              </div>
+              <h3 data-i18n="productions.p3_company">Palestinian Circus School & Terhal Circus</h3>
+              <p data-i18n="productions.p3_desc">
+                Co-founded Terhal Circus. Directed and performed in Station 48 and A Side. Cast member in Dancing Colors, Krasi, and Maktoob.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-badge-row">
+                <span class="timeline-period" data-i18n="productions.p4_period">2016 – Present</span>
+                <span class="timeline-role" data-i18n="productions.p4_role">Touring Performer & Educator</span>
+              </div>
+              <h3 data-i18n="productions.p4_company">International Tours & Collaborations</h3>
+              <p data-i18n="productions.p4_desc">
+                Instant Act tour against violence and racism (Germany & Italy, 2017), Freiburg Contact Festival (2018), Al-Funon Dabke collaboration (2019), The Bridge (2022–present), and Caravan Circus Network (2024–present).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISUAL GALLERY SECTION -->
+    <section class="gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <div class="section-tag" data-i18n="gallery.tag">Documentation</div>
+          <h2 class="section-title font-display" data-i18n="gallery.title">Performance Photography</h2>
+          <p class="section-subtitle" data-i18n="gallery.subtitle">
+            Stage documentation, television appearances, and movement studies.
+          </p>
+        </div>
+
+        <div class="gallery-filters reveal">
+          <button type="button" class="gallery-filter-btn active" data-filter="all" data-i18n="gallery.filter_all">All Work</button>
+          <button type="button" class="gallery-filter-btn" data-filter="solos" data-i18n="gallery.filter_solos">Solos &amp; Theatre</button>
+          <button type="button" class="gallery-filter-btn" data-filter="acro" data-i18n="gallery.filter_acro">Acrobatics</button>
+          <button type="button" class="gallery-filter-btn" data-filter="stage" data-i18n="gallery.filter_stage">Stage &amp; Broadcast</button>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Item 1 -->
+          <div class="gallery-item reveal" data-category="solos" data-caption-key="gallery.img1" data-full="assets/images/solo-the-bridge.jpg">
+            <picture>
+              <source srcset="assets/images/solo-the-bridge.webp" type="image/webp">
+              <img src="assets/images/solo-the-bridge.jpg" alt="Solo Performance: The Bridge – Checkpoint Border Transit" loading="lazy">
+            </picture>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-badge">Solos &amp; Theatre</span>
+              <p class="gallery-item-caption" data-i18n="gallery.img1">Solo Performance: The Bridge – Checkpoint Border Transit</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="gallery-item reveal" data-category="solos" data-caption-key="gallery.img2" data-full="assets/images/solo-home-awake-suitcase.jpg">
+            <picture>
+              <source srcset="assets/images/solo-home-awake-suitcase.webp" type="image/webp">
+              <img src="assets/images/solo-home-awake-suitcase.jpg" alt="Home Awake – The Suitcase & The Journey" loading="lazy">
+            </picture>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-badge">Solos &amp; Theatre</span>
+              <p class="gallery-item-caption" data-i18n="gallery.img2">Home Awake – The Suitcase &amp; The Journey</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="gallery-item reveal" data-category="stage" data-caption-key="gallery.img3" data-full="assets/images/golden-buzzer-confetti.jpg">
+            <picture>
+              <source srcset="assets/images/golden-buzzer-confetti.webp" type="image/webp">
+              <img src="assets/images/golden-buzzer-confetti.jpg" alt="Slovenija Ima Talent – Golden Buzzer Confetti Moment" loading="lazy">
+            </picture>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-badge">Television</span>
+              <p class="gallery-item-caption" data-i18n="gallery.img3">Slovenija Ima Talent – Golden Buzzer Confetti Moment</p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="gallery-item reveal" data-category="stage" data-caption-key="gallery.img4" data-full="assets/images/golden-buzzer-tatreez.jpg">
+            <picture>
+              <source srcset="assets/images/golden-buzzer-tatreez.webp" type="image/webp">
+              <img src="assets/images/golden-buzzer-tatreez.jpg" alt="Slovenija Ima Talent – Tatreez Solo Performance" loading="lazy">
+            </picture>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-badge">Television</span>
+              <p class="gallery-item-caption" data-i18n="gallery.img4">Slovenija Ima Talent – Tatreez Solo Performance</p>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="gallery-item reveal" data-category="acro" data-caption-key="gallery.img5" data-full="assets/images/acro-planche-bw.jpg">
+            <picture>
+              <source srcset="assets/images/acro-planche-bw.webp" type="image/webp">
+              <img src="assets/images/acro-planche-bw.jpg" alt="Mid-Air Planche Freeze – Theatre Stage" loading="lazy">
+            </picture>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-badge">Acrobatics</span>
+              <p class="gallery-item-caption" data-i18n="gallery.img5">Mid-Air Planche Freeze – Theatre Stage</p>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="gallery-item reveal" data-category="stage" data-caption-key="gallery.img6" data-full="assets/images/kino-siska-flag.jpg">
+            <picture>
+              <source srcset="assets/images/kino-siska-flag.webp" type="image/webp">
+              <img src="assets/images/kino-siska-flag.jpg" alt="En Dva Svetova – Kino Šiška Stage Appearance" loading="lazy">
+            </picture>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-badge">Stage &amp; Broadcast</span>
+              <p class="gallery-item-caption" data-i18n="gallery.img6">En Dva Svetova – Kino Šiška Stage Appearance</p>
+            </div>
+          </div>
+
+          <!-- Item 7 -->
+          <div class="gallery-item reveal" data-category="stage" data-caption-key="gallery.img7" data-full="assets/images/peron-cudes-balloon.jpg">
+            <picture>
+              <source srcset="assets/images/peron-cudes-balloon.webp" type="image/webp">
+              <img src="assets/images/peron-cudes-balloon.jpg" alt="Peron Čudes – Station Scene with Balloon" loading="lazy">
+            </picture>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-badge">Stage &amp; Broadcast</span>
+              <p class="gallery-item-caption" data-i18n="gallery.img7">Peron Čudes – Station Scene with Balloon</p>
+            </div>
+          </div>
+
+          <!-- Item 8 -->
+          <div class="gallery-item reveal" data-category="acro" data-caption-key="gallery.img8" data-full="assets/images/acro-freeze-ronja.jpg">
+            <picture>
+              <source srcset="assets/images/acro-freeze-ronja.webp" type="image/webp">
+              <img src="assets/images/acro-freeze-ronja.jpg" alt="One-Arm Acrobatic Freeze – Ronja Live Stage" loading="lazy">
+            </picture>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-badge">Acrobatics</span>
+              <p class="gallery-item-caption" data-i18n="gallery.img8">One-Arm Acrobatic Freeze – Ronja Live Stage</p>
+            </div>
+          </div>
+
+          <!-- Item 9 -->
+          <div class="gallery-item reveal" data-category="solos" data-caption-key="gallery.img9" data-full="assets/images/solo-home-awake-floor.jpg">
+            <picture>
+              <source srcset="assets/images/solo-home-awake-floor.webp" type="image/webp">
+              <img src="assets/images/solo-home-awake-floor.jpg" alt="Solo Performance: Home Awake – Floor Stage Sequence" loading="lazy">
+            </picture>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-badge">Solos &amp; Theatre</span>
+              <p class="gallery-item-caption" data-i18n="gallery.img9">Solo Performance: Home Awake – Floor Stage Sequence</p>
+            </div>
+          </div>
+
+          <!-- Item 10 -->
+          <div class="gallery-item reveal" data-category="acro" data-caption-key="gallery.img10" data-full="assets/images/acro-stage-green.jpg">
+            <picture>
+              <source srcset="assets/images/acro-stage-green.webp" type="image/webp">
+              <img src="assets/images/acro-stage-green.jpg" alt="Acrobatic Balance in Stage Lighting" loading="lazy">
+            </picture>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-badge">Acrobatics</span>
+              <p class="gallery-item-caption" data-i18n="gallery.img10">Acrobatic Balance in Stage Lighting</p>
+            </div>
+          </div>
+
+          <!-- Item 11 -->
+          <div class="gallery-item reveal" data-category="acro" data-caption-key="gallery.img11" data-full="assets/images/concert-back-layout.jpg">
+            <picture>
+              <source srcset="assets/images/concert-back-layout.webp" type="image/webp">
+              <img src="assets/images/concert-back-layout.jpg" alt="Concert Hall Inverted Layout Freeze" loading="lazy">
+            </picture>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-badge">Acrobatics</span>
+              <p class="gallery-item-caption" data-i18n="gallery.img11">Concert Hall Inverted Layout Freeze</p>
+            </div>
+          </div>
+
+          <!-- Item 12 -->
+          <div class="gallery-item reveal" data-category="stage" data-caption-key="gallery.img12" data-full="assets/images/theatre-portrait-bw.jpg">
+            <picture>
+              <source srcset="assets/images/theatre-portrait-bw.webp" type="image/webp">
+              <img src="assets/images/theatre-portrait-bw.jpg" alt="Theatrical Study – Low Key Light" loading="lazy">
+            </picture>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-badge">Stage &amp; Broadcast</span>
+              <p class="gallery-item-caption" data-i18n="gallery.img12">Theatrical Study – Low Key Light</p>
+            </div>
+          </div>
+
+          <!-- Item 13 -->
+          <div class="gallery-item reveal" data-category="acro" data-caption-key="gallery.img13" data-full="assets/images/cyr-stage-spin.jpg">
+            <picture>
+              <source srcset="assets/images/cyr-stage-spin.webp" type="image/webp">
+              <img src="assets/images/cyr-stage-spin.jpg" alt="Cyr Wheel Dynamic Rotation on Stage" loading="lazy">
+            </picture>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-badge">Acrobatics</span>
+              <p class="gallery-item-caption" data-i18n="gallery.img13">Cyr Wheel Dynamic Rotation on Stage</p>
+            </div>
+          </div>
+
+          <!-- Item 14 -->
+          <div class="gallery-item reveal" data-category="solos" data-caption-key="gallery.img14" data-full="assets/images/rehearsal-intimate.jpg">
+            <picture>
+              <source srcset="assets/images/rehearsal-intimate.webp" type="image/webp">
+              <img src="assets/images/rehearsal-intimate.jpg" alt="Intimate Rehearsal Space Exploration" loading="lazy">
+            </picture>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-badge">Solos &amp; Theatre</span>
+              <p class="gallery-item-caption" data-i18n="gallery.img14">Intimate Rehearsal Space Exploration</p>
+            </div>
+          </div>
+
+          <!-- Item 15 -->
+          <div class="gallery-item reveal" data-category="stage" data-caption-key="gallery.img15" data-full="assets/images/peron-cudes-character.jpg">
+            <picture>
+              <source srcset="assets/images/peron-cudes-character.webp" type="image/webp">
+              <img src="assets/images/peron-cudes-character.jpg" alt="Peron Čudes – Theatrical Character Scene" class="img-pos-direction" loading="lazy">
+            </picture>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-badge">Stage &amp; Broadcast</span>
+              <p class="gallery-item-caption" data-i18n="gallery.img15">Peron Čudes – Theatrical Character Scene</p>
+            </div>
+          </div>
+
+          <!-- Item 16 -->
+          <div class="gallery-item reveal" data-category="stage" data-caption-key="gallery.img16" data-full="assets/images/dance-duo-flow.jpg">
+            <picture>
+              <source srcset="assets/images/dance-duo-flow.webp" type="image/webp">
+              <img src="assets/images/dance-duo-flow.jpg" alt="Ensemble Partnering & Lift Dynamics" loading="lazy">
+            </picture>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-badge">Stage &amp; Broadcast</span>
+              <p class="gallery-item-caption" data-i18n="gallery.img16">Ensemble Partnering &amp; Lift Dynamics</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Photo Lightbox">
+      <div class="lightbox-backdrop"></div>
+      <button type="button" class="lightbox-btn lightbox-close" aria-label="Close Lightbox">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <button type="button" class="lightbox-btn lightbox-prev" aria-label="Previous Photo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <button type="button" class="lightbox-btn lightbox-next" aria-label="Next Photo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+
+      <div class="lightbox-content-box">
+        <img src="" alt="" class="lightbox-image">
+        <div class="lightbox-bottom-bar">
+          <p class="lightbox-caption"></p>
+          <span class="lightbox-counter">1 / 9</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT & BOOKING SECTION -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <div class="section-tag" data-i18n="contact.tag">Contact</div>
+          <h2 class="section-title font-display" data-i18n="contact.title">Direct Inquiries & Bookings</h2>
+          <p class="section-subtitle" data-i18n="contact.subtitle">
+            Reach out directly for performance bookings, festival programming, workshop schedules, and artistic collaborations.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Ahmed Kullab Direct Cards (International & Slovenia) -->
+          <div class="contact-card-ahmed-wrapper reveal">
+            <!-- Phone / WhatsApp Card -->
+            <div class="contact-card contact-card-ahmed">
+              <div class="contact-card-left">
+                <div class="contact-icon">
+                  <svg class="icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div class="contact-meta">
+                  <h4 data-i18n="contact.phone_title">Phone &amp; WhatsApp</h4>
+                  <a href="tel:+38669760818" class="contact-value">+386 69 760 818</a>
+                </div>
+              </div>
+              <div class="contact-actions-btn-group">
+                <a href="https://wa.me/38669760818?text=Hello%20Ahmed,%20I%20would%20like%20to%20inquire%20about%20a%20booking" target="_blank" rel="noopener" class="btn-icon-action" title="Chat on WhatsApp">
+                  <svg class="icon-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                  <span>WhatsApp</span>
+                </a>
+                <button type="button" class="btn-icon-action copy-trigger" data-copy="+38669760818">
+                  <span class="copy-label" data-i18n="contact.copy_btn">Copy</span>
+                  <span class="copy-feedback" data-i18n="contact.copied_btn">Copied</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Email Card -->
+            <div class="contact-card contact-card-ahmed">
+              <div class="contact-card-left">
+                <div class="contact-icon">
+                  <svg class="icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div class="contact-meta">
+                  <h4 data-i18n="contact.email_title">Email</h4>
+                  <a href="mailto:kollabahmad@gmail.com" class="contact-value">kollabahmad@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-actions-btn-group">
+                <a href="mailto:kollabahmad@gmail.com" class="btn-icon-action">
+                  Email
+                </a>
+                <button type="button" class="btn-icon-action copy-trigger" data-copy="kollabahmad@gmail.com">
+                  <span class="copy-label" data-i18n="contact.copy_btn">Copy</span>
+                  <span class="copy-feedback" data-i18n="contact.copied_btn">Copied</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Location Card -->
+            <div class="contact-card contact-card-ahmed">
+              <div class="contact-card-left">
+                <div class="contact-icon">
+                  <svg class="icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div class="contact-meta">
+                  <h4 data-i18n="contact.location_title">Current Base</h4>
+                  <span class="contact-value" data-i18n="contact.location_val" style="font-size: 0.95rem;">Ljubljana, Slovenia (Available Worldwide)</span>
+                </div>
+              </div>
+              <div class="pill-badge" style="margin: 0;">International Tours</div>
+            </div>
+
+            <!-- Social Networks Links -->
+            <div class="contact-card-ahmed">
+              <h4 style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem;" data-i18n="contact.social_title">Online Profiles</h4>
+              <div class="social-links-bar">
+                <a href="https://instagram.com/ahmadkollab" target="_blank" rel="noopener" class="social-link-btn">
+                  <svg class="icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                  <span>@ahmadkollab</span>
+                </a>
+                <a href="https://facebook.com/ahmed.kullab" target="_blank" rel="noopener" class="social-link-btn">
+                  <svg class="icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                  <span>Ahmed Kullab</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Italian Management Card (Lara Miglietti) -->
+          <div class="contact-card-italy-wrapper reveal reveal-delay-1">
+            <div class="contact-card contact-card-italy">
+              <div class="contact-card-body-italy">
+                <div class="italy-manager-profile">
+                  <div class="contact-icon">
+                    <svg class="icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  </div>
+                  <div>
+                    <h4 class="italy-manager-name" data-i18n="contact.italy_name">Lara Miglietti</h4>
+                    <span class="italy-manager-role" data-i18n="contact.italy_role">Italian Management &amp; Booking Representative</span>
+                  </div>
+                </div>
+                <p class="italy-manager-note" data-i18n="contact.italy_note">Exclusive contact for festival programming, performances, and masterclasses across Italy.</p>
+                
+                <div class="italy-contact-links">
+                  <!-- Phone / WhatsApp -->
+                  <div class="contact-item-row">
+                    <div class="contact-item-label">
+                      <svg class="icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                      <a href="tel:+393391344646" class="contact-value" data-i18n="contact.italy_phone">+39 339 134 4646</a>
+                    </div>
+                    <div class="contact-actions-btn-group">
+                      <a href="tel:+393391344646" class="btn-icon-action" title="Call Lara Miglietti">
+                        <span data-i18n="contact.call_btn">Call</span>
+                      </a>
+                      <a href="https://wa.me/393391344646?text=Salve%20Lara,%20vorrei%20informazioni%20su%20Ahmed%20Kullab" target="_blank" rel="noopener" class="btn-icon-action" title="WhatsApp Lara Miglietti">
+                        <span>WhatsApp</span>
+                      </a>
+                      <button type="button" class="btn-icon-action copy-trigger" data-copy="+393391344646">
+                        <span class="copy-label" data-i18n="contact.copy_btn">Copy</span>
+                        <span class="copy-feedback" data-i18n="contact.copied_btn">Copied</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Email -->
+                  <div class="contact-item-row">
+                    <div class="contact-item-label">
+                      <svg class="icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                      <a href="mailto:laramiglietti@virgilio.it" class="contact-value" data-i18n="contact.italy_email">laramiglietti@virgilio.it</a>
+                    </div>
+                    <div class="contact-actions-btn-group">
+                      <a href="mailto:laramiglietti@virgilio.it" class="btn-icon-action">
+                        <span>Email</span>
+                      </a>
+                      <button type="button" class="btn-icon-action copy-trigger" data-copy="laramiglietti@virgilio.it">
+                        <span class="copy-label" data-i18n="contact.copy_btn">Copy</span>
+                        <span class="copy-feedback" data-i18n="contact.copied_btn">Copied</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer with Ahmed's Logo -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <img src="assets/images/logo-dark-theme.png" alt="AJK Logo" class="footer-logo-img">
+        <div class="footer-copy">
+          <p data-i18n="footer.rights">© 2026 Ahmed Kullab. All rights reserved.</p>
+          <p class="footer-crafted" data-i18n="footer.bio_micro">Acrobatic Dancer, Contemporary Circus Artist & Coach. Ljubljana, Slovenia.</p>
+        </div>
+      </div>
+      <a href="#" class="btn-back-to-top" aria-label="Back to top" title="Back to top">
+        ▲
+      </a>
+    </div>
+  </footer>
+
+  <!-- Mobile Floating Bottom Action Bar (No emojis, translated) -->
+  <aside class="mobile-action-bar" aria-label="Quick Actions">
+    <a href="tel:+38669760818" class="mobile-action-item">
+      <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      <span data-i18n="contact.call_action">Call</span>
+    </a>
+    <a href="https://wa.me/38669760818?text=Hello%20Ahmed" target="_blank" rel="noopener" class="mobile-action-item">
+      <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+      <span data-i18n="contact.wa_action">WhatsApp</span>
+    </a>
+    <a href="mailto:kollabahmad@gmail.com" class="mobile-action-item">
+      <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+      <span data-i18n="contact.email_action">Email</span>
+    </a>
+    <a href="#events" class="mobile-action-item">
+      <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+      <span data-i18n="contact.dates_action">Schedule</span>
+    </a>
+  </aside>
+
+  <!-- Scripts -->
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

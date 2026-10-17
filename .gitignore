@@ -1,0 +1,9 @@
+# Raw uncompressed photo sources and archives (exceeds GitHub file size limits)
+*.zip
+*.jpeg
+wetransfer_img_1160-png_2026-10-14_1129/
+
+# System and OS files
+.DS_Store
+Thumbs.db
+desktop.ini
